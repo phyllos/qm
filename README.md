@@ -20,3 +20,7 @@ Run with:
 
 ```bash
 uv run python blackbody.py
+```
+
+This is a script-only project. `uv run` installs its dependencies without
+building or installing a `qm` package.
