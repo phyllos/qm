@@ -1,0 +1,4 @@
+interface:
+  display_name: "Physics Workflow"
+  short_description: "Clear physics models, maintainable scripts, useful figures"
+  default_prompt: "Use $physics-workflow to solve this physics problem with clear reasoning, appropriate checks, and useful visualizations."

@@ -516,8 +516,10 @@ def plot_spectrum(result):
     )
 
     # Peak position
-    plt.axvline(
+    plt.vlines(
         lam_peak_nm,
+        0,
+        rho_peak_nm,
         color=PEAK_COLOR,
         linestyle="--",
         linewidth=1.5,
@@ -527,6 +529,7 @@ def plot_spectrum(result):
     plt.scatter(
         lam_peak_nm,
         rho_peak_nm,
+        color="C0",
         zorder=4,
     )
 
@@ -538,8 +541,9 @@ def plot_spectrum(result):
             lam_peak_nm,
             rho_peak_nm,
         ),
-        xytext=(30, -40),
+        xytext=(45, 25),
         textcoords="offset points",
+        va="bottom",
         arrowprops={
             "arrowstyle": "->",
         },
@@ -564,7 +568,7 @@ def plot_spectrum(result):
         lam_nm[-1],
     )
 
-    plt.ylim(bottom=0)
+    plt.ylim(0, 1.16 * rho_peak_nm)
 
     plt.legend()
 
@@ -675,15 +679,19 @@ def plot_comparison_normalized():
     )
 
     # Peak lines
-    plt.axvline(
+    plt.vlines(
         lam_peak_2300_nm,
+        0,
+        1.0,
         color=PEAK_COLOR,
         linestyle="--",
         linewidth=1.5,
     )
 
-    plt.axvline(
+    plt.vlines(
         lam_peak_5000_nm,
+        0,
+        1.0,
         color=PEAK_COLOR,
         linestyle="--",
         linewidth=1.5,
@@ -693,12 +701,14 @@ def plot_comparison_normalized():
     plt.scatter(
         lam_peak_2300_nm,
         1.0,
+        color="C0",
         zorder=4,
     )
 
     plt.scatter(
         lam_peak_5000_nm,
         1.0,
+        color="C1",
         zorder=4,
     )
 
@@ -710,8 +720,9 @@ def plot_comparison_normalized():
             lam_peak_2300_nm,
             1.0,
         ),
-        xytext=(25, -35),
+        xytext=(45, 25),
         textcoords="offset points",
+        va="bottom",
         arrowprops={
             "arrowstyle": "->",
         },
@@ -724,8 +735,9 @@ def plot_comparison_normalized():
             lam_peak_5000_nm,
             1.0,
         ),
-        xytext=(25, -70),
+        xytext=(45, 25),
         textcoords="offset points",
+        va="bottom",
         arrowprops={
             "arrowstyle": "->",
         },
@@ -750,7 +762,7 @@ def plot_comparison_normalized():
 
     plt.ylim(
         0,
-        1.08,
+        1.16,
     )
 
     plt.legend()
@@ -859,15 +871,19 @@ def plot_comparison_absolute():
     )
 
     # Peak lines
-    plt.axvline(
+    plt.vlines(
         lam_peak_2300_nm,
+        0,
+        rho_peak_2300_nm,
         color=PEAK_COLOR,
         linestyle="--",
         linewidth=1.5,
     )
 
-    plt.axvline(
+    plt.vlines(
         lam_peak_5000_nm,
+        0,
+        rho_peak_5000_nm,
         color=PEAK_COLOR,
         linestyle="--",
         linewidth=1.5,
@@ -877,12 +893,14 @@ def plot_comparison_absolute():
     plt.scatter(
         lam_peak_2300_nm,
         rho_peak_2300_nm,
+        color="C0",
         zorder=4,
     )
 
     plt.scatter(
         lam_peak_5000_nm,
         rho_peak_5000_nm,
+        color="C1",
         zorder=4,
     )
 
@@ -894,8 +912,10 @@ def plot_comparison_absolute():
             lam_peak_2300_nm,
             rho_peak_2300_nm,
         ),
-        xytext=(35, 30),
+        xytext=(35, 15),
         textcoords="offset points",
+        ha="center",
+        va="bottom",
         arrowprops={
             "arrowstyle": "->",
         },
@@ -908,8 +928,9 @@ def plot_comparison_absolute():
             lam_peak_5000_nm,
             rho_peak_5000_nm,
         ),
-        xytext=(35, -45),
+        xytext=(45, 25),
         textcoords="offset points",
+        va="bottom",
         arrowprops={
             "arrowstyle": "->",
         },
@@ -934,7 +955,7 @@ def plot_comparison_absolute():
         3000,
     )
 
-    plt.ylim(bottom=0)
+    plt.ylim(0, 1.16 * max(rho_peak_2300_nm, rho_peak_5000_nm))
 
     plt.legend()
 
