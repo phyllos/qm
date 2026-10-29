@@ -54,6 +54,29 @@ plot windows.
 
 See [the derivation and physical interpretation](docs/spin_measurement.md).
 
+### Problem 5(a) — Dirac Delta Sequence
+
+`delta_sequence.py` plots `sin(gx)/(pi x)` for positive cutoffs g = 1, 4, 12,
+and 30.
+
+The script:
+
+- evaluates the continuous value g/π at x = 0,
+- compares the full profile and central zoom on the same vertical scale,
+- shows the taller, narrower central peak and increasingly rapid oscillations,
+- reports the peak height and the width between the first zeros.
+
+Run:
+
+```bash
+uv run python delta_sequence.py
+```
+
+Output: one two-panel figure in PNG and SVG format. Use `--g 1 4 12 30`
+to select cutoffs, and add `--show` to open the plot window.
+
+See [the interpretation and limiting behavior](docs/delta_sequence.md).
+
 ## Project Skill
 
 The repository skill
