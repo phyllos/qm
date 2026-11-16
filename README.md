@@ -99,11 +99,6 @@ See [the derivation and numerical checks](docs/sudden_well_expansion.md).
 
 ## Project Skill
 
-The repository skill
-[physics-workflow](.agents/skills/physics-workflow/SKILL.md) provides general
-guidance for physical models, maintainable calculation scripts, meaningful
-checks, and explanatory visualizations.
+Use [`$scientific-workflow`](.agents/skills/scientific-workflow/SKILL.md)
+to model, solve, check, or visualize scientific and engineering problems.
 
-Use `$physics-workflow` when working on a physics problem. Maintain reusable
-guidance in the skill and keep problem-specific methods, parameters, and
-figure settings in the corresponding script.

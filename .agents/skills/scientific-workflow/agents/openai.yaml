@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Workflow"
+  short_description: "Solve, check, and explain scientific problems"
+  default_prompt: "Use $scientific-workflow to solve and explain this scientific question, with a check or figure if useful."
