@@ -27,7 +27,7 @@ inverse-length units and $\delta_g$ has inverse-length units.
 
 For $g>0$, the signed integral over the whole real line is $1$. This integral
 is conditionally convergent; the plotted finite interval need not have area $1$.
-For a symmetric window $[-L,L]$, its signed area is $(2/\pi)\operatorname{Si}(gL)$.
+For a symmetric window $[-L,L]$, its signed area is $(2/\pi)\mathrm{Si}(gL)$.
 
 At a fixed nonzero $x$, $\delta_g(x)$ generally keeps oscillating as $g$ increases.
 The convergence to the Dirac delta is understood through integration against
@@ -36,7 +36,7 @@ For example,
 
 ```math
 \int_{-\infty}^{\infty}e^{-x^2}\delta_g(x)\,dx
-=\operatorname{erf}(g/2)\longrightarrow 1.
+=\mathrm{erf}(g/2)\longrightarrow 1.
 ```
 
 ## Run
