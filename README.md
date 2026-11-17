@@ -97,6 +97,23 @@ The two-panel figure is saved as `figs/sudden_well_expansion.png` and
 
 See [the derivation and numerical checks](docs/sudden_well_expansion.md).
 
+### Problem 4(a–c,f) — One-Sided Finite Well
+
+`one_sided_finite_well.py` sketches the potential and shows how graphical
+matching gives the bound states at a fixed depth. It also plots how the
+bound-state energies of an electron in a 1 nm well vary with depth and
+compares the two normalized densities at the third-state threshold.
+
+```bash
+uv run python one_sided_finite_well.py
+```
+
+The matching, spectrum, and density figures are saved as PNG and SVG files
+in `figs/`.
+Add `--show` to open the plot windows.
+
+See [the matching equation and calculations](docs/one_sided_finite_well.md).
+
 ## Project Skill
 
 Use [`$scientific-workflow`](.agents/skills/scientific-workflow/SKILL.md)
