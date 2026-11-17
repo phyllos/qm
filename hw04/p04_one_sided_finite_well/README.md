@@ -16,7 +16,7 @@ $w=-z\cot z$, with $z^2+w^2=\rho^2$.
 
 ## (a) Graphical matching at a fixed depth
 
-![Potential and graphical matching for a fixed well depth](../figs/one_sided_finite_well_matching.png)
+![Potential and graphical matching for a fixed well depth](figs/01_matching.png)
 
 The left panel shows the potential energy as a function of position, with
 a hard wall at $x=0$ and a step from $-V_0$ to $0$ at $x=L$. Both panels use
@@ -31,7 +31,7 @@ energies $E=-E_\ast w^2$. The open point has $w=0$ and $E=0$.
 
 ## (b,c) Binding thresholds and energies
 
-![Bound-state energies plotted against well depth](../figs/one_sided_finite_well_spectrum.png)
+![Bound-state energies plotted against well depth](figs/02_spectrum.png)
 
 On branch $n=1,2,\ldots$, the bound-state root lies between
 $z_{\mathrm{th},n}=(n-\tfrac12)\pi$ and $n\pi$. With
@@ -55,7 +55,7 @@ two bound-state energies, $-2.05578\,\mathrm{eV}$ and $-1.19504\,\mathrm{eV}$.
 
 ## (f) Probability outside the well
 
-![Normalized ground and first excited state densities with shaded exterior tails](../figs/one_sided_finite_well_density.png)
+![Normalized ground and first excited state densities with shaded exterior tails](figs/03_density.png)
 
 With $y=x/L$, write the normalized state as $\psi(x)=A_n\sin(z_n y)$
 inside and $\psi(x)=A_n\sin z_n\,e^{-w_n(y-1)}$ outside.
@@ -79,10 +79,12 @@ a more slowly decaying tail. Its density is also larger at the well edge.
 
 ## Run
 
+Run from the repository root.
+
 ```bash
-uv run python one_sided_finite_well.py
+uv run python hw04/p04_one_sided_finite_well/one_sided_finite_well.py
 ```
 
-The script saves the matching, spectrum, and density figures as PNG and SVG
-files in `figs/`.
+The script saves `01_matching`, `02_spectrum`, and `03_density` as PNG and SVG
+files in the problem's `figs/` directory.
 Add `--show` to open the plot windows.

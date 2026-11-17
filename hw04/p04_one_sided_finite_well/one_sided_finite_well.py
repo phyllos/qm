@@ -248,9 +248,9 @@ def main() -> None:
         print(f"  n={state.level}: E = {state.energy_ev:.6f} eV, P(outside) = {outside:.4%}")
 
     figures = {
-        "one_sided_finite_well_matching": make_matching_figure(states, critical_depth),
-        "one_sided_finite_well_spectrum": make_spectrum_figure(states, critical_depth),
-        "one_sided_finite_well_density": make_density_figure(states, critical_depth),
+        "01_matching": make_matching_figure(states, critical_depth),
+        "02_spectrum": make_spectrum_figure(states, critical_depth),
+        "03_density": make_density_figure(states, critical_depth),
     }
     out_dir = Path(__file__).resolve().parent / "figs"
     out_dir.mkdir(exist_ok=True)

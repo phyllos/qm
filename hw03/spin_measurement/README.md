@@ -1,6 +1,6 @@
 # HW3: three polarizers and three Stern-Gerlach filters
 
-![Transmission comparison](../figs/spin_measurement_comparison.png)
+![Transmission comparison](figs/01_comparison.png)
 
 In both experiments, **$I_0$ is the intensity after the first filter**.
 The graph therefore gives the fraction of this already prepared beam
@@ -55,7 +55,7 @@ The optimum is $\gamma=90^\circ$, giving $I/I_0=1/4$.
 
 ## Why the peak angles differ
 
-![Apparatus arrangements](../figs/spin_measurement_apparatus.png)
+![Apparatus arrangements](figs/02_apparatus.png)
 
 The end filters select orthogonal states in both experiments. For light,
 their physical axes differ by $90^\circ$; for spin 1/2, the selected positive
@@ -76,11 +76,13 @@ actual physical angles so the difference in optimum angles remains visible.
 
 ## Generate the figure
 
+Run from the repository root.
+
 ```bash
-uv run python spin_measurement.py
+uv run python hw03/spin_measurement/spin_measurement.py
 # Optional interactive Matplotlib window:
-uv run python spin_measurement.py --show
+uv run python hw03/spin_measurement/spin_measurement.py --show
 ```
 
-The script saves separate transmission and apparatus figures to `figs/`,
-each in PNG and editable SVG format.
+The script saves `01_comparison` and `02_apparatus` in the problem's `figs/`
+directory, each in PNG and editable SVG format.

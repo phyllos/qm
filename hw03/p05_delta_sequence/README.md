@@ -1,6 +1,6 @@
 # HW3 Problem 5(a): a sinc delta sequence
 
-![Full profile and central zoom](../figs/delta_sequence.png)
+![Full profile and central zoom](figs/delta_sequence.png)
 
 For a positive cutoff $g$, consider
 
@@ -41,9 +41,11 @@ For example,
 
 ## Run
 
+Run from the repository root.
+
 ```bash
-uv run python delta_sequence.py
-uv run python delta_sequence.py --g 1 4 12 30 --show
+uv run python hw03/p05_delta_sequence/delta_sequence.py
+uv run python hw03/p05_delta_sequence/delta_sequence.py --g 1 4 12 30 --show
 ```
 
 The script saves `figs/delta_sequence.png` and `figs/delta_sequence.svg`.

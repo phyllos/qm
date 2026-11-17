@@ -2,7 +2,7 @@
 
 I0 is measured AFTER the first polarizer/filter. Every SG device keeps
 only its positive output; the negative output is blocked, not recombined.
-Run `uv run python spin_measurement.py` to save the comparison figure.
+Run `uv run python hw03/spin_measurement/spin_measurement.py` from the repo root.
 """
 
 import argparse
@@ -107,8 +107,8 @@ def main():
     out_dir = Path(__file__).resolve().parent / "figs"
     out_dir.mkdir(exist_ok=True)
     figures = {
-        "spin_measurement_comparison": make_figure(),
-        "spin_measurement_apparatus": make_apparatus_figure(),
+        "01_comparison": make_figure(),
+        "02_apparatus": make_apparatus_figure(),
     }
     for name, fig in figures.items():
         for suffix in ("png", "svg"):

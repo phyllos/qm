@@ -1,6 +1,6 @@
 # HW4 Problem 1(d,e) — Sudden expansion of an infinite well
 
-![Series convergence and the probability density over one revival period](../figs/sudden_well_expansion.png)
+![Series convergence and the probability density over one revival period](figs/sudden_well_expansion.png)
 
 The particle starts in the ground state of the infinite well on $0<x<L$.
 When the right wall suddenly moves to $2L$, the state at $t=0^+$ is
@@ -92,8 +92,10 @@ the smallest, fastest oscillations can require a finer grid.
 
 ## Run
 
+Run from the repository root.
+
 ```bash
-uv run python sudden_well_expansion.py
+uv run python hw04/p01_sudden_well_expansion/sudden_well_expansion.py
 ```
 
 The script saves PNG and SVG figures in `figs/`. Add `--show` to open the

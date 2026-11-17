@@ -442,7 +442,7 @@ def finish_figure(filename):
 # Individual spectrum plot
 # ============================================================
 
-def plot_spectrum(result):
+def plot_spectrum(result, figure_number):
     """
     Plot one blackbody spectrum.
 
@@ -573,7 +573,7 @@ def plot_spectrum(result):
     plt.legend()
 
     finish_figure(
-        f"blackbody_{int(T)}K.png"
+        f"{figure_number:02d}_spectrum_{int(T)}K.png"
     )
 
 
@@ -581,7 +581,7 @@ def plot_spectrum(result):
 # Normalized comparison
 # ============================================================
 
-def plot_comparison_normalized():
+def plot_comparison_normalized(figure_number):
     """
     Compare the shapes of the 2300 K and 5000 K spectra.
 
@@ -768,7 +768,7 @@ def plot_comparison_normalized():
     plt.legend()
 
     finish_figure(
-        "blackbody_comparison_normalized.png"
+        f"{figure_number:02d}_comparison_normalized.png"
     )
 
 
@@ -776,7 +776,7 @@ def plot_comparison_normalized():
 # Absolute comparison
 # ============================================================
 
-def plot_comparison_absolute():
+def plot_comparison_absolute(figure_number):
     """
     Compare the actual spectral energy densities
     for 2300 K and 5000 K.
@@ -960,7 +960,7 @@ def plot_comparison_absolute():
     plt.legend()
 
     finish_figure(
-        "blackbody_comparison_absolute.png"
+        f"{figure_number:02d}_comparison_absolute.png"
     )
 
 
@@ -1069,18 +1069,18 @@ def main():
     # Individual spectra
     # --------------------------------------------------------
 
-    for T in TEMPERATURES:
+    for figure_number, T in enumerate(TEMPERATURES, start=1):
         plot_spectrum(
-            results[T]
+            results[T], figure_number
         )
 
     # --------------------------------------------------------
     # Comparison plots
     # --------------------------------------------------------
 
-    plot_comparison_normalized()
+    plot_comparison_normalized(len(TEMPERATURES) + 1)
 
-    plot_comparison_absolute()
+    plot_comparison_absolute(len(TEMPERATURES) + 2)
 
     # --------------------------------------------------------
     # Incandescent / LED estimate
